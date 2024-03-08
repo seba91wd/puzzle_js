@@ -1,0 +1,203 @@
+/* -------------------------------------------------------------------------------------- */
+/* ---------------------------------- RESET CSS ----------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+button {
+    all: unset;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------------- Style by TAG --------------------------------------- */
+
+body {
+    color: #000000;
+    /* background-color: #3d3d3d; */
+    font-family: sans-serif;
+    text-align: center;
+}
+
+header {
+    height: 130px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 6px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+select {
+    padding: 4px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------- Style by CLASS -------------------------------------- */
+
+.border {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: 6px auto;
+    padding: 5px;
+    width: 300px;
+    box-sizing: content-box;
+}
+
+.arrow {
+    position: relative;
+    bottom: 54px;
+}
+
+.back_arrow {
+    cursor: pointer;
+    float: left;
+}
+
+.next_arrow {
+    cursor: pointer;
+    float: right;
+
+}
+
+.bold {
+    font-weight: bold;
+    margin: 6px;
+}
+
+.btn {
+    padding: 6px;
+}
+
+.puzzle_cell {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.slide-out-left {
+    animation: slide-out-left 0.5s linear both;
+}
+
+.slide-out-right {
+    animation: slide-out-right 0.5s linear both;
+}
+
+.slide-in-right {
+    animation: slide-in-right 0.5s linear both;
+}
+
+.slide-in-left {
+    animation: slide-in-left 0.5s linear both;
+}
+
+.separation {
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    width: 80%;
+    height: 6px;
+    background-color: #ffffff;
+    margin: 12px auto;
+}
+
+.hidden {
+    display: none!important;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* ---------------------------------- Style by ID --------------------------------------- */
+
+#container {
+    contain: content;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+#random_image {
+    margin: 4px 0;
+}
+
+#loading_indicator {
+    display: none;
+    animation: loading_rotate 1s infinite linear;
+}
+
+#pieces_array,
+#puzzle_array {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#puzzle_pieces p {
+    margin: 20px;
+}
+
+#pieces_array {
+    width: 100%;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------- Animation loading ----------------------------------- */
+
+@keyframes loading_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slide-out-left {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out-right {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+}
